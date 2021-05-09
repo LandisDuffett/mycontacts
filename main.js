@@ -65,7 +65,7 @@ function drawContacts() {
             <i class="fa fa-fw fa-phone"></i>
             <span>${contact.phone}</span>
           </p>
-          <i class="action fa fa-trash text-danger" onclick="removeContact('${contact.Id}')">remove</i>
+          <i class="action fa fa-trash text-danger" onclick="removeContact('${contact.id}')">remove</i>
         </div>
       </div>
       `
@@ -83,6 +83,7 @@ function drawContacts() {
  * @param {string} contactId 
  */
 function removeContact(contactId) {
+  debugger
   let index = contacts.findIndex(contact => contact.id == contactId)
   contacts.splice(index, 1)
   saveContacts()
